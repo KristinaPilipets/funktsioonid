@@ -47,3 +47,13 @@ def square(side:float):
 	D=sqrt(2*side**2)
 	ans=(f"P={P}; S={S}; D="+str(round(D,2)))
 	return ans
+def season(a:int):
+	if a==1 or a==2 or a==12:
+		ans="talv"
+	elif a==3 or a==4 or a==5:
+		ans="kevad"
+	elif a==6 or a==7 or a== 8:
+		ans="suve"
+	else:
+		ans=="sügis"
+	return ans
