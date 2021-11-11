@@ -1,7 +1,7 @@
 from module1 import*
 while True:
 	print("Finktsioonid".center(50,"+"))
-	v=input("arithmetic- A, Liigaasta- Y, Square- S, Season- SE")
+	v=input("arithmetic- A, Liigaasta- Y, Square- S, Season- SE, Bank- B, Is prime- L")
 	if v.upper()=="A":
 		arv1=float(input("Arv 1: "))
 		arv2=float(input("Arv 2: "))
@@ -25,3 +25,17 @@ while True:
 				TypeError
 		ans=season(month)
 		print(f"Sinu kuu on {ans} aastaaajas ")
+	elif v.upper()=="B":
+		a=float(input("Sisseta raha arv: "))
+		aasta=int(input("Sisseta mitu aasta: "))
+		ans=bank(a,aasta)
+		print(f"Sinu pangahoius on {ans}")
+	elif v.upper()=="L":
+		ans=is_prime(int(input("Sisseta arv:")))
+		print(ans)
+	elif v.upper()=="D":
+		paev=int(input("Sisseta päev: "))
+		kuu=int(input("Sisseta kuu: "))
+		aasta=int(input("Sisseta aasta: "))
+		ans=date(paev,kuu,aasta)
+		print(ans)
