@@ -73,10 +73,16 @@ def is_prime(a:int):
 	:param int a: esimine arv
 	:rtyoe bool:
 	"""
-	if a%2==0 or a%3==0:
-		ans="False"
+	if a!=2:
+		if a%2==0:
+			ans="False"
+		else:
+			ans="True"
 	else:
-		ans="True"
+		if a%3==0:
+			ans="False"
+		else:
+			ans="True"
 	return ans
 def date(a:int,b:int,c:int):
 	"""kas see on õige

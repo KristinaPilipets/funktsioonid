@@ -1,7 +1,7 @@
 from module1 import*
 while True:
 	print("Finktsioonid".center(50,"+"))
-	v=input("arithmetic- A, Liigaasta- Y, Square- S, Season- SE, Bank- B, Is prime- L")
+	v=input("arithmetic- A, Liigaasta- Y, Square- S, Season- SE, Bank- B, Is prime- L, Date- D >>> ")
 	if v.upper()=="A":
 		arv1=float(input("Arv 1: "))
 		arv2=float(input("Arv 2: "))
