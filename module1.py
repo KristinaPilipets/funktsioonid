@@ -63,6 +63,12 @@ def season(a:int):
 		ans=="sügis"
 	return ans
 def bank(a:float,b:int)->float:
+	"""Arvustab pangahoius
+	tagstab mitu raha on pangis siseta aastad järel
+	:param float a: raha arv
+	:param int b: mitu aasta
+	:rtype float: mitu raha on pangis
+	"""
 	for i in range (1,b+1):
 		e=a*0.10
 		d=a+e
