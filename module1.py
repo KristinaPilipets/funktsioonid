@@ -26,7 +26,7 @@ def arithmetic(a: float,b:float,c:str):
 	return r
 def is_year_leap(aasta:int):
 	"""Liigaasta
-	Tagastab trui kui aasta on liigaasta ja false kui ei ole
+	Tagastab true kui aasta on liigaasta ja false kui ei ole
 	:param int aasta: Aasta number
 	:rtype bool: Funktioni vastus loogilises formaadis
 	"""
@@ -38,20 +38,20 @@ def is_year_leap(aasta:int):
 	return ans
 def square(side:float):
 	"""Square
-	tagastab resultadi
+	tagastab resultadi teksti koos pindala-S, ümbermõõt-P, diagonaal-D
 	:param float side: side length
-	:rtype str:
+	:rtype str: vastus teksti koos kõik resultadid(P; S; D)
 	"""
 	P=side*4
 	S=side**2
 	D=sqrt(2*side**2)
-	ans=(f"P={P}; S={S}; D="+str(round(D,2)))
+	ans=(f"P(ümbermõõt)={P}; S(pindala)={S}; D(diagonaal)="+str(round(D,2)))
 	return ans
 def season(a:int):
 	"""aastaaeg
 	tagastab mis aastaaeg kuu on
 	:param int a: kuu
-	:rtype str:
+	:rtype str: vastus koos aastaeg nimega
 	"""
 	if a==1 or a==2 or a==12:
 		ans="talv"
@@ -68,12 +68,12 @@ def bank(a:float,b:int)->float:
 		d=a+e
 	return d
 def is_prime(a:int):
+	"""Kontrolib kas see on lihtne arv või ei lihtne
+	tagastab resultadi True kui lihtne ja False kui ei ole
+	:param int a: arv milline kood kontrolib
+	:rtyoe bool: Funktioni vastus loogilises formaadis
 	"""
-	tagastab resultadi
-	:param int a: esimine arv
-	:rtyoe bool:
-	"""
-	if a!=2 or a!=3:
+	if a!=2 and a!=3:
 		if a%2==0:
 			ans="False"
 		else:
@@ -88,12 +88,12 @@ def is_prime(a:int):
 			ans="True"
 	return ans
 def date(a:int,b:int,c:int):
-	"""kas see on õige
-	tagastab bool
+	"""kas see kuu, päev ja aasta on ehtne
+	tagastab bool True kui ehtne ja False kui ei ehtne
 	:param int a: paev
 	:param int b: kuu
 	:param int c: aasta
-	:rtype bool:
+	:rtype bool: Funktioni vastus loogilises formaadis
 	"""
 	if ((b==1 or b>=1) and (b<=12 or b==12)) and ((a==1 or a>=1) and (a==31 or a<=31)) and c>=0:
 		if b==2 and a<=30:
@@ -110,7 +110,7 @@ def XOR_cipher(string:str,key:str):
 	"""tavaline sõna kodeeritakse
 	:param str a: tekst
 	:param b: võti
-	:rtype str:
+	:rtype str: vastus teksti
 	"""
 	result=""
 	temp=int()
@@ -122,6 +122,9 @@ def XOR_cipher(string:str,key:str):
 	return result
 def XOR_uncipher(string:str,key:str)->str:
 	"""Kodeeritud text dekodeeritakse
+	:param str string: koderivad tekst
+	:param str key: võti
+	:rtype str: tagastab dekoderita teksti
 	"""
 	result=""
 	temp=[]
