@@ -39,3 +39,13 @@ while True:
 		aasta=int(input("Sisseta aasta: "))
 		ans=date(paev,kuu,aasta)
 		print(ans)
+	elif v.upper()=="XORc":
+		tekst=input("Sisseta teksti: ")
+		voti=input("Sisseta voti: ")
+		ans=XOR_cipher(tekst,voti)
+		print(ans)
+	elif v.upper()=="XORun":
+		tekst=input("Sisseta teksti: ")
+		voti=input("Sisseta voti: ")
+		ans=XOR_uncipher(tekst,voti)
+		print(ans)

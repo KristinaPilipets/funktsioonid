@@ -73,13 +73,16 @@ def is_prime(a:int):
 	:param int a: esimine arv
 	:rtyoe bool:
 	"""
-	if a!=2:
+	if a!=2 or a!=3:
 		if a%2==0:
 			ans="False"
 		else:
-			ans="True"
+			if a%3==0:
+				ans="False"
+			else:
+				ans="True"
 	else:
-		if a%3==0:
+		if a%5==0:
 			ans="False"
 		else:
 			ans="True"
@@ -103,3 +106,19 @@ def date(a:int,b:int,c:int):
 		else:
 			ans="False"
 	return ans
+def XOR_cipher(string:str,key:str):
+	"""tavaline sõna kodeeritakse
+	:param str a: tekst
+	:param b: võti
+	:rtype str:
+	"""
+	result=""
+	temp=int()
+	for i in range(len(string)):
+		temp = ord(string[i])#näitab sümboli kood
+		for j in range (len(key)):
+			temp ^= ord(key[j])
+		result +=chr(temp)
+	return result
+def XOR_uncipher(string:str,key:str)->str:
+	
