@@ -1,7 +1,7 @@
 from module1 import*
 while True:
 	print("Finktsioonid".center(50,"+"))
-	v=input("arithmetic- A, Liigaasta- Y, Square- S, Season- SE, Bank- B, Is prime- L, Date- D >>> ")
+	v=input("arithmetic- A, Liigaasta- Y, Square- S, Season- SE, Bank- B, Is prime- L, Date- D, XOR-шифрование- X >>> ")
 	if v.upper()=="A":
 		arv1=float(input("Arv 1: "))
 		arv2=float(input("Arv 2: "))
@@ -39,13 +39,10 @@ while True:
 		aasta=int(input("Sisseta aasta: "))
 		ans=date(paev,kuu,aasta)
 		print(ans)
-	elif v.upper()=="XORC":
-		tekst=input("Sisseta teksti: ")
-		voti=input("Sisseta voti: ")
-		ans=XOR_cipher(tekst,voti)
+	elif v.upper()=="X":
+		print("Kodeerimine".center(60,"*"))
+		ans=XOR_cipher(input("Sisseta teksti: "), input("Sisseta voti: "))
 		print(ans)
-	elif v.upper()=="XORUN":
-		tekst=input("Sisseta teksti: ")
-		voti=input("Sisseta voti: ")
-		ans=XOR_uncipher(tekst,voti)
-		print(ans)
+		print("Dekodeerimine".center(60,"*"))
+		de_ans=XOR_uncipher(ans,input("Siseta võti: "))
+		print(de_ans)

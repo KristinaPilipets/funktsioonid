@@ -114,20 +114,20 @@ def XOR_cipher(string:str,key:str):
 	"""
 	result=""
 	temp=int()
-	for i in range(len(string)):
+	for i in range(len(string)):#определяем кол-во символов
 		temp = ord(string[i])#näitab sümboli kood
 		for j in range (len(key)):
-			temp ^= ord(key[j])
-		result +=chr(temp)
+			temp ^= ord(key[j])#начинаем кодировать текст
+		result +=chr(temp)#ставим кодированнный текст как результат чтобы запомнить его
 	return result
 def XOR_uncipher(string:str,key:str)->str:
 	"""Kodeeritud text dekodeeritakse
 	"""
 	result=""
 	temp=[]
-	for i in range(len(string)):
+	for i in range(len(string)):#определяем кол-во символов
 		temp.append(string[i])
-		for j in reversed(range(len(key))):
+		for j in reversed(range(len(key))):#в обратном порядке ставим буквы
 			temp[i]=chr(ord(key[j])^ord(temp[i]))
 		result+=temp[i]
 	return result
