@@ -114,8 +114,8 @@ def date(a:int,b:int,c:int):
 	return ans
 def XOR_cipher(string:str,key:str):
 	"""tavaline sõna kodeeritakse
-	:param str a: tekst
-	:param b: võti
+	:param str string: tekst
+	:param key: võti
 	:rtype str: vastus teksti
 	"""
 	result=""
